@@ -5,14 +5,8 @@ main {
 
   @include respondMin($tab_port) {
     display: grid;
-    grid-template-rows: repeat(
-      3,
-      [row-start]minmax(310px, min-content) [row-end]
-    );
-    grid-template-columns: repeat(
-      3,
-      [col-start]minmax(min-content, 1fr) [col-end]
-    );
+    grid-template-rows: repeat(3, [row-start] minmax(310px, min-content) [row-end]);
+    grid-template-columns: repeat(3, [col-start] minmax(min-content, 1fr) [col-end]);
     grid-gap: rem(24) rem(30);
   }
   @include respondMin($desk_top) {
