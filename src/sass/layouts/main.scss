@@ -1,0 +1,25 @@
+@use '../abstracts/' as *;
+
+main {
+  padding: rem(70) rem(24);
+
+  @include respondMin($tab_port) {
+    display: grid;
+    grid-template-rows: repeat(
+      3,
+      [row-start]minmax(310px, min-content) [row-end]
+    );
+    grid-template-columns: repeat(
+      3,
+      [col-start]minmax(min-content, 1fr) [col-end]
+    );
+    grid-gap: rem(24) rem(30);
+  }
+  @include respondMin($desk_top) {
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(4, 282px);
+    grid-gap: rem(24) rem(30);
+    place-content: center;
+  }
+}

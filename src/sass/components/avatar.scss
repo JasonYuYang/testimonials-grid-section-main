@@ -1,0 +1,22 @@
+@use '../abstracts' as *;
+
+.avatar {
+  display: flex;
+  margin-bottom: rem(22);
+
+  &__img {
+    width: rem(28);
+    height: rem(28);
+    border-radius: 50%;
+    border: solid 1px $border-violet;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: rem(15);
+    &--verify {
+      opacity: 50%;
+    }
+  }
+}
